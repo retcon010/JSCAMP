@@ -1,12 +1,13 @@
-/* 1. Archivos Base */
+/* Punto de entrada CSS: importa los estilos en el orden de dependencia. */
+/* 1. Variables y estilos base */
 @import url('base/variables.css');
 @import url('base/reset.css');
 
-/* 2. Componentes Reutilizables */
+/* 2. Componentes reutilizables */
 @import url('components/buttons.css');
 @import url('components/cards.css');
 @import url('components/navbar.css');
 
-/* 3. Estilos de Páginas */
+/* 3. Estilos específicos de páginas */
 @import url('pages/main.css');
 @import url('pages/dashboard.css');

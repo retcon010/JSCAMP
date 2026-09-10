@@ -6,14 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TechJobs - Inicio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../public/img/code.svg" style="color: white;">
 </head>
 
 <body>
-    <!-- CABECERA -->
-    <header>
+    <!-- Cabecera principal: logo, enlaces de navegación, acciones y tema visual. -->
+    <header class="site-header">
         <div class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
-            TechJobs
+            <img class="logito" src="img/code.svg" alt="Código">
+            DevJobs
         </div>
         <nav>
             <ul>
@@ -27,34 +28,52 @@
         <div class="user-actions">
             <button class="btn-secondary">publicar empleo</button>
             <button class="btn-primary">Iniciar sesión</button>
+            <button class="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false">
+                <span aria-hidden="true">☾</span>
+            </button>
         </div>
     </header>
 
+    <!-- Contenido principal de la página de inicio. -->
     <main>
         <section class="hero">
-            <h2 class="hero-title">Encuentra el trabajo de tus sueños</h2>
-            <p>Únete a nuestra comunidad de profesionales tecnológicos y descubre oportunidades que se ajusten a tu perfil.</p>
+        <!-- Hero: presentación principal con fondo degradado y buscador. -->
+        <div class="hero-content">
+            <h1>Encuentra el trabajo de tus sueños</h1>
+            <p>Únete a la comunidad más grande de desarrolladores y encuentra tu próxima oportunidad.</p>
             
-            <form action="buscar.html" method="get">
-                <input type="text" name="query" placeholder="Buscar empleos...">
-                <button type="submit">Buscar</button>
+            <!-- Formulario de búsqueda visual; todavía no envía datos a un backend. -->
+            <div class="search-container">
+            <form class="search-form">
+                <div class="input-wrapper">
+                <!-- Icono SVG inline para identificar el campo de búsqueda. -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                <input type="text" placeholder="Buscar empleos por título, habilidad o empresa" class="search-input">
+                </div>
+                <button type="submit" class="search-button">Buscar</button>
             </form>
+            </div>
+        </div>
         </section>
 
-        <section>
-            <h2>¿Por qué TechJobs?</h2>
-            <p>TechJobs es la principal bolsa de trabajo para desarrolladores. Conectamos a los desarrolladores con las mejores empresas del mundo.</p>
+        <!-- Beneficios: tres tarjetas que resumen el valor de la plataforma. -->
+        <section class="benefits">
+            <h2>¿Por qué DevJobs?</h2>
+            <p class="benefits-intro">DevJobs es la principal bolsa de trabajo para desarrolladores. Conectamos a los desarrolladores con las mejores empresas del mundo.</p>
 
-            <div>
-                <div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">▣</div>
                     <h3>Encuentra el trabajo de tus sueños</h3>
                     <p>Busca miles de empleos de las mejores empresas del mundo.</p>
                 </div>
-                <div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">♧</div>
                     <h3>Conecta con las mejores empresas</h3>
                     <p>Conecta con empresas que están contratando por tus habilidades.</p>
                 </div>
-                <div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">▥</div>
                     <h3>Obtén el salario que mereces</h3>
                     <p>Obtén el salario que mereces con nuestra calculadora de salarios.</p>
                 </div>
@@ -62,8 +81,10 @@
         </section>
     </main>
 
+    <!-- Pie de página con la información legal básica. -->
     <footer>
-        <p>&copy; 2026 TechJobs. Todos los derechos reservados.</p>
+        <p>&copy; 2025 DevJobs. Todos los derechos reservados.</p>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>

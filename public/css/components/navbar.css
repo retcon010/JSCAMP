@@ -1,46 +1,90 @@
+/* Distribución y tamaño de la cabecera. */
 header {
     display: flex;
     justify-content: space-between;
-    padding: 1.2rem;
+    padding: 1rem 1.5rem;
     align-items: center;
     background-color: var(--color-main);
+    min-height: 80px;
 }
 
+/* Enlaces horizontales de navegación. */
 nav ul {
     display: flex;
     list-style: none;
-    gap: 1rem;
+    gap: 2.5rem;
+    font-size: 1rem;
+    color: var(--color-neutral);
 }
 
+nav a {
+    position: relative;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background-color: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--color-primary);
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+/* Marca de la aplicación: icono y nombre. */
 .logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 0.5rem;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-svg {
+.logito {
     background-color: var(--color-primary);
-    color: white;
+    width: 52px;
+    height: 52px;
+    padding: 10px;
+    border-radius: 7px;
 }
 
+/* Botones de acciones del usuario y sus estados hover. */
 .btn-primary{
     background-color: var(--btn-secondary);
     color: black;
-    border: none;
-    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    padding: 0.75rem 1.2rem;
+    font-size: 0.95rem;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-secondary {
-    background-color: var(--btn-secondary);
-    color: black;
+    background-color: var(--color-primary);
+    color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.2rem;
+    font-size: 0.95rem;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .user-actions {
@@ -48,8 +92,80 @@ svg {
     gap: 1rem;
 }
 
-.btn-primary:hover, .btn-secondary:hover {
+.btn-secondary:hover {
+    background-color: var(--color-secondary);
+    color: white;
+    transform: translateY(-1px);
+}
 
+.btn-primary:hover {
     background-color: var(--color-primary);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+    outline: 3px solid var(--color-tertiary);
+    outline-offset: 3px;
+}
+
+/* Botón circular que alterna entre modo claro y oscuro. */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    line-height: 1;
+    border: 1px solid var(--btn-secondary);
+    border-radius: 50%;
+    background-color: var(--color-main);
+    color: var(--color-neutral);
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.theme-toggle span {
+    display: block;
+    line-height: 1;
+    transform: translateY(-1px);
+}
+
+.theme-toggle:hover {
+    background-color: var(--btn-secondary);
+}
+
+/* En modo oscuro se reemplazan las variables de superficie y texto. */
+body.dark-mode {
+    --color-main: #111827;
+    --btn-secondary: #243244;
+    --text-color: #E5E7EB;
+    --bg-color: #08111D;
+}
+
+body.dark-mode header,
+body.dark-mode main,
+body.dark-mode footer,
+body.dark-mode .benefits,
+body.dark-mode .search-form {
+    background-color: var(--color-main);
+}
+
+body.dark-mode nav ul,
+body.dark-mode .logo,
+body.dark-mode .benefits h2,
+body.dark-mode .benefit-card h3,
+body.dark-mode .theme-toggle {
+    color: var(--text-color);
+}
+
+body.dark-mode .btn-primary,
+body.dark-mode .btn-secondary {
+    color: var(--text-color);
+}
+
+body.dark-mode .btn-secondary {
     color: white;
 }

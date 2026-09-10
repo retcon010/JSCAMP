@@ -1,18 +1,33 @@
 *, *::before, *::after {
+  /* Hace que padding y border formen parte del tamaño declarado. */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
+  /* Estilos base compartidos por todas las páginas. */
   font-family: var(--font-main);
   font-size: var(--font-size-base);
-  background-color: var(--bg-color);
+  background-color: var(--color-main);
   color: var(--text-color);
   line-height: 1.5;
+  min-height: 100vh;
+}
+
+header,
+main,
+footer {
+  /* Las áreas principales usan la superficie definida por las variables. */
+  background-color: var(--color-main);
+}
+
+footer {
+  border-radius: 0;
 }
 
 a {
+  /* Los enlaces heredan el color del contexto y no muestran subrayado. */
   text-decoration: none;
   color: inherit;
 }

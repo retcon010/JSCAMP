@@ -1,15 +1,242 @@
-.hero{
-    background-image: url('../../img/pexels-thirdman-7652039.jpg');
-    background-size: auto auto;
-    background-position: center;
+/* Hero: bloque visual principal de la página. */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 470px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../img/pexels-thirdman-7652039.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-.hero {
-    display: flex;
-    flex-direction: column;
+/* El degradado cubre la imagen y mantiene el texto legible. */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color-secondary), var(--color-neutral));
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--color-main);
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.4rem;
+  line-height: 1.1;
+}
+
+.hero-content p {
+  max-width: 700px;
+  margin: 20px auto 0;
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+/* Barra de búsqueda: campo, icono y botón de acción. */
+
+/* Contenedor del buscador */
+.search-form {
+  display: flex;
+  background-color: var(--color-main);
+  border-radius: 7px;
+  padding: 5px 6px 5px 12px;
+  width: 100%;
+  max-width: 580px;
+  margin: 38px auto 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  align-items: center;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 12px;
+}
+
+.search-icon {
+  color: var(--color-tertiary);
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Campo de entrada y placeholder. */
+.search-input {
+  background: transparent;
+  border: none;
+  color: var(--color-neutral);
+  font-size: 1rem;
+  padding: 13px 0;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: var(--color-secondary);
+  opacity: 1;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+body.dark-mode .search-input {
+  color: var(--text-color);
+}
+
+body.dark-mode .search-input::placeholder {
+  color: #9CA3AF;
+}
+
+body.dark-mode .hero-content {
+  color: #FFFFFF;
+}
+
+body.dark-mode .search-button {
+  color: #FFFFFF;
+}
+
+/* Botón de acción del formulario. */
+.search-button {
+  background-color: var(--color-primary);
+  color: var(--color-main);
+  border: none;
+  border-radius: 6px;
+  padding: 13px 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.search-button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-main);
+}
+
+.search-button:focus-visible {
+  outline: 3px solid var(--color-tertiary);
+  outline-offset: 2px;
+}
+
+/* Sección informativa con tres beneficios alineados en columnas. */
+.benefits {
+  padding: 58px 48px 60px;
+  text-align: center;
+  background-color: var(--color-main);
+}
+
+.benefits h2 {
+  color: var(--color-neutral);
+  font-size: 1.45rem;
+}
+
+.benefits-intro {
+  max-width: 560px;
+  margin: 8px auto 36px;
+  color: var(--color-secondary);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Tarjeta individual de cada beneficio. */
+.benefit-card {
+  min-height: 150px;
+  padding: 16px 18px;
+  border: 1px solid var(--btn-secondary);
+  border-radius: 7px;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.08);
+}
+
+.benefit-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background-color: var(--btn-secondary);
+  color: var(--color-primary);
+  font-size: 1.3rem;
+}
+
+.benefit-card h3 {
+  color: var(--color-neutral);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.benefit-card p {
+  margin-top: 8px;
+  color: var(--color-secondary);
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
+/* Pie de página visualmente separado por una línea superior. */
+footer {
+  padding: 18px 24px;
+  color: var(--color-secondary);
+  text-align: center;
+  font-size: 0.65rem;
+  border-top: 1px solid var(--btn-secondary);
+}
+
+/* En pantallas pequeñas, la navegación y las tarjetas pasan a varias filas. */
+@media (max-width: 720px) {
+  header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+  }
+
+  nav ul {
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 8rem;
-    color: white;
+    gap: 1rem;
+  }
+
+  .hero {
+    min-height: 360px;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .benefits {
+    padding: 42px 20px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+body.dark-mode .benefit-card {
+  background-color: #172233;
+  border-color: var(--btn-secondary);
 }
