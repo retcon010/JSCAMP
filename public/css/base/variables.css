@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  /* Paleta de colores corporativa para Chrono Service */
+  --color-primary: #059669;   /* Azul principal: utilizado para elementos destacados, botones y enlaces activos */
+  --color-secondary: #108981; /* Azul grisáceo: ideal para textos secundarios, descripciones y estados hover */
+  --color-tertiary: #34D399;  /* Gris claro azulado: usado para líneas divisorias (<hr>) y bordes tenues */
+  --color-neutral: #0F172A;   /* Fondo neutro intermedio: perfecto para tarjetas, contenedores y bloques de contenido */
+  --color-main: white;      /* Fondo principal de la web: tono casi blanco para mantener una estética limpia */
+  --btn-secondary: #F0F4F9;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente principal para títulos y textos destacados */
+}
