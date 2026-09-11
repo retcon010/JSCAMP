@@ -13,6 +13,8 @@ body {
   color: var(--text-color);
   line-height: 1.5;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header,
@@ -20,6 +22,11 @@ main,
 footer {
   /* Las áreas principales usan la superficie definida por las variables. */
   background-color: var(--color-main);
+}
+
+main {
+  /* El contenido ocupa el espacio libre y empuja el footer hacia abajo. */
+  flex: 1;
 }
 
 footer {

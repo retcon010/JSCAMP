@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TechJobs - Empleos</title>
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../public/img/code.svg" style="color: white;">
+</head>
+
+<body class="jobs-page">
+    <!-- CABECERA -->
+    <header class="site-header">
+        <div class="logo">
+            <img class="logito" src="../../public/img/code.svg" alt="Código">
+            <a href="../../public/index.html">DevJobs</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Buscar</a></li>
+                <li><a href="../layouts/empleos.html">Empleos</a></li>
+                <li><a href="#">Empresas</a></li>
+                <li><a href="#">Salarios</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-actions">
+            <button class="btn-secondary">publicar empleo</button>
+            <button class="btn-primary">Iniciar sesión</button>
+            <button class="theme-toggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false">
+                <span aria-hidden="true">☾</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="jobs-main">
+        <section class="jobs-hero">
+            <h1>Encuentra tu próximo trabajo</h1>
+            <p>Explora miles de oportunidades en el sector tecnológico.</p>
+        </section>
+
+        <section class="jobs-content" aria-labelledby="results-title">
+            <form class="jobs-search" role="search">
+                <label class="sr-only" for="job-search">Buscar empleos</label>
+                <span class="jobs-search-icon" aria-hidden="true">⌕</span>
+                <input id="job-search" type="search" placeholder="Buscar trabajos, empresas o habilidades">
+            </form>
+
+            <div class="job-filters" aria-label="Filtros de empleos">
+                <button type="button">Tecnología <span aria-hidden="true">⌄</span></button>
+                <button type="button">Ubicación <span aria-hidden="true">⌄</span></button>
+                <button type="button">Tipo de contrato <span aria-hidden="true">⌄</span></button>
+                <button type="button">Nivel de experiencia <span aria-hidden="true">⌄</span></button>
+            </div>
+
+            <h2 id="results-title">Resultados de búsqueda</h2>
+
+            <div class="job-list">
+                <article class="job-card">
+                    <div>
+                        <h3>Ingeniero de Software</h3>
+                        <p class="job-meta">Tech Solutions Inc. | Remoto</p>
+                        <p>Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React y Node.js.</p>
+                    </div>
+                    <button class="apply-button" type="button">Aplicar</button>
+                </article>
+
+                <article class="job-card">
+                    <div>
+                        <h3>Analista de Datos</h3>
+                        <p class="job-meta">Data Driven Co. | Ciudad de México</p>
+                        <p>Estamos buscando un analista de datos con experiencia en el manejo de grandes conjuntos de datos y herramientas de visualización.</p>
+                    </div>
+                    <button class="apply-button" type="button">Aplicar</button>
+                </article>
+
+                <article class="job-card">
+                    <div>
+                        <h3>Desarrollador de Aplicaciones Móviles</h3>
+                        <p class="job-meta">Mobile Apps Ltd. | Guadalajara</p>
+                        <p>Buscamos un desarrollador de aplicaciones móviles con experiencia en iOS y Android, Swift, Kotlin y desarrollo de interfaces.</p>
+                    </div>
+                    <button class="apply-button" type="button">Aplicar</button>
+                </article>
+
+                <article class="job-card">
+                    <div>
+                        <h3>Ingeniero de DevOps</h3>
+                        <p class="job-meta">Cloud Services SA | Remoto</p>
+                        <p>Buscamos experiencia en infraestructura en la nube, automatización de procesos y herramientas de integración continua.</p>
+                    </div>
+                    <button class="apply-button" type="button">Aplicar</button>
+                </article>
+            </div>
+
+            <nav class="pagination" aria-label="Paginación de resultados">
+                <button type="button" aria-label="Página anterior">&lt;</button>
+                <button class="active" type="button" aria-current="page">1</button>
+                <button type="button">2</button>
+                <button type="button">3</button>
+                <button type="button">4</button>
+                <button type="button">5</button>
+                <button type="button" aria-label="Página siguiente">&gt;</button>
+            </nav>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DevJobs. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../../public/js/main.js"></script>
+</body>
+</html>

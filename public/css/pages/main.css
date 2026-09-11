@@ -120,6 +120,9 @@ body.dark-mode .search-button {
   cursor: pointer;
   margin-left: 8px;
   transition: background-color 0.2s ease;
+  &:active {
+    transform: scale(0.98);
+  }
 }
 
 .search-button:hover {
@@ -203,21 +206,6 @@ footer {
 
 /* En pantallas pequeñas, la navegación y las tarjetas pasan a varias filas. */
 @media (max-width: 720px) {
-  header {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  nav {
-    order: 3;
-    width: 100%;
-  }
-
-  nav ul {
-    justify-content: center;
-    gap: 1rem;
-  }
-
   .hero {
     min-height: 360px;
     height: auto;

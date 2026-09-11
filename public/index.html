@@ -5,23 +5,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TechJobs - Inicio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
     <link rel="icon" type="image/svg+xml" href="../public/img/code.svg" style="color: white;">
 </head>
 
-<body>
-    <!-- Cabecera principal: logo, enlaces de navegación, acciones y tema visual. -->
+<body class="home-page">
+    <!-- CABECERA -->
     <header class="site-header">
         <div class="logo">
-            <img class="logito" src="img/code.svg" alt="Código">
-            DevJobs
+            <img class="logito" src="../public/img/code.svg" alt="Código">
+            <a href="../public/index.html">DevJobs</a>
         </div>
         <nav>
             <ul>
-                <li><a href="public/buscar.html">Buscar</a></li>
-                <li><a href="public/empleos.html">Empleos</a></li>
-                <li><a href="public/empresas.html">Empresas</a></li>
-                <li><a href="public/salarios.html">Salarios</a></li>
+                <li><a href="#">Buscar</a></li>
+                <li><a href="../views/layouts/empleos.html">Empleos</a></li>
+                <li><a href="#">Empresas</a></li>
+                <li><a href="#">Salarios</a></li>
             </ul>
         </nav>
 
@@ -34,29 +34,26 @@
         </div>
     </header>
 
-    <!-- Contenido principal de la página de inicio. -->
     <main>
         <section class="hero">
-        <!-- Hero: presentación principal con fondo degradado y buscador. -->
-        <div class="hero-content">
-            <h1>Encuentra el trabajo de tus sueños</h1>
-            <p>Únete a la comunidad más grande de desarrolladores y encuentra tu próxima oportunidad.</p>
-            
-            <!-- Formulario de búsqueda visual; todavía no envía datos a un backend. -->
-            <div class="search-container">
-            <form class="search-form">
-                <div class="input-wrapper">
-                <!-- Icono SVG inline para identificar el campo de búsqueda. -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
-                <input type="text" placeholder="Buscar empleos por título, habilidad o empresa" class="search-input">
+        <!-- Tu imagen de fondo y superposición aquí -->
+            <div class="hero-content">
+                <h1>Encuentra el trabajo de tus sueños</h1>
+                <p>Únete a la comunidad más grande de desarrolladores y encuentra tu próxima oportunidad.</p>
+                
+                <!-- CONTENEDOR DE LA BARRA DE BÚSQUEDA -->
+                <div class="search-container">
+                    <form class="search-form">
+                        <div class="input-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg><!-- O un icono SVG real -->
+                            <input type="text" placeholder="Buscar empleos por título, habilidad o empresa" class="search-input">
+                        </div>
+                        <button type="submit" class="search-button">Buscar</button>
+                    </form>
                 </div>
-                <button type="submit" class="search-button">Buscar</button>
-            </form>
             </div>
-        </div>
         </section>
 
-        <!-- Beneficios: tres tarjetas que resumen el valor de la plataforma. -->
         <section class="benefits">
             <h2>¿Por qué DevJobs?</h2>
             <p class="benefits-intro">DevJobs es la principal bolsa de trabajo para desarrolladores. Conectamos a los desarrolladores con las mejores empresas del mundo.</p>
@@ -81,9 +78,8 @@
         </section>
     </main>
 
-    <!-- Pie de página con la información legal básica. -->
     <footer>
-        <p>&copy; 2025 DevJobs. Todos los derechos reservados.</p>
+        <p>&copy; 2026 DevJobs. Todos los derechos reservados.</p>
     </footer>
     <script src="js/main.js"></script>
 </body>

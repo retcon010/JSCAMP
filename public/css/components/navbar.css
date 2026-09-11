@@ -169,3 +169,90 @@ body.dark-mode .btn-secondary {
 body.dark-mode .btn-secondary {
     color: white;
 }
+
+/* En móvil el logo y las acciones ocupan la primera fila; los enlaces bajan. */
+@media (max-width: 720px) {
+    header.site-header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 14px;
+        min-height: auto;
+        padding: 0.85rem 1rem;
+    }
+
+    header.site-header nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+    }
+
+    header.site-header nav ul {
+        justify-content: center;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+        font-size: 0.85rem;
+    }
+
+    header.site-header .logo {
+        font-size: 1.15rem;
+    }
+
+    header.site-header .logito {
+        width: 40px;
+        height: 40px;
+        padding: 7px;
+    }
+
+    header.site-header .user-actions {
+        justify-content: flex-end;
+        gap: 0.5rem;
+    }
+
+    header.site-header .btn-primary,
+    header.site-header .btn-secondary {
+        padding: 0.55rem 0.7rem;
+        font-size: 0.75rem;
+    }
+
+    header.site-header .theme-toggle {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header.site-header {
+        grid-template-columns: 1fr;
+    }
+
+    header.site-header .user-actions {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    header.site-header nav {
+        grid-row: 3;
+    }
+
+    header.site-header nav ul {
+        justify-content: flex-start;
+        gap: 0.9rem 1.1rem;
+    }
+}
+
+/* Ajustes específicos del inicio para evitar desbordamientos del hero móvil. */
+@media (max-width: 720px) {
+    .home-page .hero-content {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .home-page .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-page .search-form {
+        max-width: 100%;
+    }
+}
